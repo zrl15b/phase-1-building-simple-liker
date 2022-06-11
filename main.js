@@ -23,3 +23,20 @@ function mimicServerCall(url="http://mimicServer.example.com", config={}) {
     }, 300);
   });
 }
+
+//document.querySelectorAll("like-glyph").addEventListener('click',() => console.log("asdfsadfsdf"))
+
+console.log(document.getElementsByClassName("like"))
+
+//console.log(mimicServerCall())
+btns = document.getElementsByClassName("like")
+btns.forEach(element => { element.addEventListener('click', mimicServerCall())
+  if (failure) {
+    document.getElementById("modal").classList.toggle("")
+    }
+  else {
+    btns.innerHTML = FULL_HEART
+  }
+  })
+  
+  
